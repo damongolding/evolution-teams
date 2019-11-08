@@ -22,7 +22,7 @@ class App extends Component {
   componentWillMount() {
     // could do something like pull state from API
     Tabletop.init( {
-      key: 'https://docs.google.com/spreadsheets/d/10-zhbCvKemVlKJrqHGwjzBXVMylWLEQ6mGZOuFH38Kk/',
+      key: '2PACX-1vQ2LywYv9ZCcEj-BbFUtsn9DEQF5MxwDl5oUEADMHxEl2KhzqiqZRX6gua6NAv2Y7zrQ_j2ohtu-q9v',
       simpleSheet: true }
     ).then(function(data, tabletop) { 
       console.log(data)
