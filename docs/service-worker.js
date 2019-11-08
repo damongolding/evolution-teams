@@ -14,7 +14,7 @@
 importScripts("https://storage.googleapis.com/workbox-cdn/releases/4.3.1/workbox-sw.js");
 
 importScripts(
-  "/evolution-teams/precache-manifest.80c72093f8ea3a7437dfd98f73e553d2.js"
+  "/evolution-teams/precache-manifest.c000f7eb6bfb92446e3cfab85e37a509.js"
 );
 
 self.addEventListener('message', (event) => {

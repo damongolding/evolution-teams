@@ -1,5 +1,9 @@
 import React, { Component } from "react";
 
+import Tabletop from 'tabletop';
+
+import Team from './components/team';
+
 class App extends Component {
   constructor(props) {
     super(props);
@@ -10,13 +14,19 @@ class App extends Component {
         { name: "Klip", kd: 0.8 },
         { name: "Tommy", kd: 2.2 },
         { name: "John", kd: 3.2 },
-        { name: "cyn", kd: 1.4 },
+        { name: "cyn", kd: 1.4 }
       ]
     };
   }
 
   componentWillMount() {
     // could do something like pull state from API
+    Tabletop.init( {
+      key: 'https://docs.google.com/spreadsheets/d/10-zhbCvKemVlKJrqHGwjzBXVMylWLEQ6mGZOuFH38Kk/',
+      simpleSheet: true }
+    ).then(function(data, tabletop) { 
+      console.log(data)
+    })
   }
 
   componentDidMount() {}
@@ -44,36 +54,13 @@ class App extends Component {
 
       playerSort.pop();
 
-      if (currentLastPlayer.name !== player.name) {
-        return (
-          // Team!
-          <div className="column is-3 message">
-            <div class="message-header">
-              <span className="is-pulled-left">Team {index + 1}</span>
-              <span className="is-pulled-right">
-                { (player.kd +  currentLastPlayer.kd).toFixed(1) } combined
-              </span>
-            </div>
-            <div class="message-body has-text-centered">
-              <h3 className="title">
-                {player.name} & {currentLastPlayer.name}
-              </h3>
-            </div>
-          </div>
-        );
-      } else {
-        // Solo player
-        return (
-          <div className="column is-3 message">
-            <div class="message-header">
-              <p>Team {index + 1}</p>
-            </div>
-            <div class="message-body has-text-centered">
-              <h3 className="title">{player.name}</h3>
-            </div>
-          </div>
-        );
-      }
+      return (
+        <Team
+          index={index}
+          player={player}
+          currentLastPlayer={currentLastPlayer}
+        />
+      );
     });
 
     return (
@@ -82,13 +69,17 @@ class App extends Component {
           <div className="container">
             <div className="columns is-centered">
               <div className="column is-7-tablet is-6-desktop">
-              <h2 className="title">Players</h2>
+                <h2 className="title">Players</h2>
                 <table class="table is-bordered is-fullwidth">
-                  <tr>
-                    <th>Player</th>
-                    <th>KD</th>
-                  </tr>
-                  {players}
+                  <thead>
+                    <tr>
+                      <th>Player</th>
+                      <th>KD</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    {players}
+                  </tbody>
                 </table>
               </div>
             </div>
