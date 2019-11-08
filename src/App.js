@@ -15,8 +15,7 @@ class App extends Component {
     };
   }
  
-  //https://docs.google.com/spreadsheets/d/10-zhbCvKemVlKJrqHGwjzBXVMylWLEQ6mGZOuFH38Kk/edit?usp=sharing
-  componentWillMount() {
+  componentDidMount() {
     // could do something like pull state from API
     Tabletop.init( {
       key: '10-zhbCvKemVlKJrqHGwjzBXVMylWLEQ6mGZOuFH38Kk',
@@ -27,20 +26,19 @@ class App extends Component {
     });
   }
 
-  componentDidMount() {}
-
   componentWillUnmount() {}
 
   componentDidUpdate() {}
 
   render() {
+
     const playerSort = this.state.players.sort((a, b) => {
       return b.kd - a.kd;
     });
 
-    const players = playerSort.map(player => {
+    const players = playerSort.map( (player, index) => {
       return (
-        <tr>
+        <tr key={index}>
           <td>{player.name}</td>
           <td>{player.kd}</td>
         </tr>
@@ -57,18 +55,19 @@ class App extends Component {
           index={index}
           player={player}
           currentLastPlayer={currentLastPlayer}
+          key={index}
         />
       );
     });
 
     return (
       <div className="App">
-        <section class="section">
+        <section className="section">
           <div className="container">
             <div className="columns is-centered">
               <div className="column is-7-tablet is-6-desktop">
                 <h2 className="title">Players</h2>
-                <table class="table is-bordered is-fullwidth">
+                <table className="table is-bordered is-fullwidth">
                   <thead>
                     <tr>
                       <th>Player</th>
@@ -76,7 +75,7 @@ class App extends Component {
                     </tr>
                   </thead>
                   <tbody>
-                    {players}
+                    { players }
                   </tbody>
                 </table>
               </div>
@@ -84,11 +83,11 @@ class App extends Component {
           </div>
         </section>
 
-        <section class="section teams-section">
+        <section className="section teams-section">
           <div className="container">
             <h2 className="title">Teams</h2>
 
-            <div class="columns is-multiline">{newTeam}</div>
+            <div className="columns is-multiline">{newTeam}</div>
           </div>
         </section>
       </div>
