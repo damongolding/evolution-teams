@@ -3,6 +3,7 @@ import React, { Component } from "react";
 import Tabletop from 'tabletop';
 
 import Team from './components/team';
+import Header from './components/header';
 
 class App extends Component {
   constructor(props) {
@@ -62,6 +63,9 @@ class App extends Component {
 
     return (
       <div className="App">
+
+        <Header />
+        
         <section className="section">
           <div className="container">
             <div className="columns is-centered">
