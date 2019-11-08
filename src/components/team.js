@@ -19,7 +19,7 @@ const Team = ({ index, player, currentLastPlayer }) => {
           </span>
         </div>
         <div className="message-body has-text-centered">
-          <h3 className="title">
+          <h3 className="title is-4">
             {player.name} & {currentLastPlayer.name}
           </h3>
         </div>
@@ -38,7 +38,7 @@ const Team = ({ index, player, currentLastPlayer }) => {
           </span>
         </div>
         <div className="message-body has-text-centered">
-          <h3 className="title">{player.name}</h3>
+					<h3 className="title is-4">{player.name}</h3>
         </div>
       </div>
     );
