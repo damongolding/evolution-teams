@@ -9,12 +9,7 @@ class App extends Component {
     super(props);
     this.state = {
       players: [
-        { name: "Damon", kd: 2.9 },
-        { name: "Guru", kd: 1.2 },
-        { name: "Klip", kd: 0.8 },
-        { name: "Tommy", kd: 2.2 },
-        { name: "John", kd: 3.2 },
-        { name: "cyn", kd: 1.4 }
+        { name: "Loading...", kd: 0 }
       ]
     };
   }
@@ -25,7 +20,7 @@ class App extends Component {
       key: '2PACX-1vQ2LywYv9ZCcEj-BbFUtsn9DEQF5MxwDl5oUEADMHxEl2KhzqiqZRX6gua6NAv2Y7zrQ_j2ohtu-q9v',
       simpleSheet: true }
     ).then(function(data, tabletop) { 
-      console.log(data)
+      this.setState({players:data});
     })
   }
 
