@@ -9,19 +9,22 @@ class App extends Component {
     super(props);
     this.state = {
       players: [
+        { name: "Loading...", kd: 0 },
         { name: "Loading...", kd: 0 }
       ]
     };
   }
-
+ 
+  //https://docs.google.com/spreadsheets/d/10-zhbCvKemVlKJrqHGwjzBXVMylWLEQ6mGZOuFH38Kk/edit?usp=sharing
   componentWillMount() {
     // could do something like pull state from API
     Tabletop.init( {
-      key: '2PACX-1vQ2LywYv9ZCcEj-BbFUtsn9DEQF5MxwDl5oUEADMHxEl2KhzqiqZRX6gua6NAv2Y7zrQ_j2ohtu-q9v',
+      key: '10-zhbCvKemVlKJrqHGwjzBXVMylWLEQ6mGZOuFH38Kk',
       simpleSheet: true }
-    ).then(function(data, tabletop) { 
+    ).then( (data, tabletop) => { 
+      console.log(data);
       this.setState({players:data});
-    })
+    });
   }
 
   componentDidMount() {}

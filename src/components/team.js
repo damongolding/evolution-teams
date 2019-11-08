@@ -1,13 +1,16 @@
 import React from 'react';
 
 const Team = ({ index, player, currentLastPlayer }) => {
+
+	const combinedKD = player.kd + currentLastPlayer.kd;
+
   if (currentLastPlayer.name !== player.name) {
     return (
       <div className="column is-3 message">
         <div className="message-header">
           <span className="is-pulled-left">Team {index + 1}</span>
           <span className="is-pulled-right">
-            {(player.kd + currentLastPlayer.kd).toFixed(1)} combined
+            { combinedKD }
           </span>
         </div>
         <div className="message-body has-text-centered">
@@ -21,7 +24,10 @@ const Team = ({ index, player, currentLastPlayer }) => {
     return (
       <div className="column is-3 message">
         <div className="message-header">
-          <p>Team {index + 1}</p>
+				<span className="is-pulled-left">Team {index + 1}</span>
+          <span className="is-pulled-right">
+            { player.kd }
+          </span>
         </div>
         <div className="message-body has-text-centered">
           <h3 className="title">{player.name}</h3>
