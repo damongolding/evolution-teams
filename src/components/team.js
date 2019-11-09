@@ -15,7 +15,7 @@ const Team = ({ index, player, currentLastPlayer }) => {
         <div className="message-header">
           <span className="is-pulled-left">Team {index + 1}</span>
           <span className="is-pulled-right">
-            KD : { combinedKD.toFixed(2) / 2 }
+            KD : { combinedKD.toFixed(1) / 2 }
           </span>
         </div>
         <div className="message-body has-text-centered">
