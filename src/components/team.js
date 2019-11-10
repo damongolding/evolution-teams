@@ -1,7 +1,7 @@
 import React from 'react';
 
 const Team = ({ index, player, currentLastPlayer }) => {
-
+  
 	// Team
   if (currentLastPlayer.name !== player.name) {
 		
