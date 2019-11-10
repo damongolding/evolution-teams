@@ -27,7 +27,6 @@ const Team = ({ index, player, currentLastPlayer }) => {
 	// Solo player
   } else {
 		const playerKD = parseFloat(player.kd);
-
     return (
       <div className="column is-3 message">
         <div className="message-header">
