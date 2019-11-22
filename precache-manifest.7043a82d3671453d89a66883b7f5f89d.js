@@ -1,10 +1,10 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "f1b4f223ace75de7abbd4f8e558a5d53",
+    "revision": "17578d70f52fc127bc0c4cc66212c150",
     "url": "/evolution-teams/index.html"
   },
   {
-    "revision": "ec416f07cfac1edb5bee",
+    "revision": "d1ce1065f4676f3c78b0",
     "url": "/evolution-teams/static/css/main.e9c0d303.chunk.css"
   },
   {
@@ -12,8 +12,8 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/evolution-teams/static/js/2.dc26bcb1.chunk.js"
   },
   {
-    "revision": "ec416f07cfac1edb5bee",
-    "url": "/evolution-teams/static/js/main.1d55a62b.chunk.js"
+    "revision": "d1ce1065f4676f3c78b0",
+    "url": "/evolution-teams/static/js/main.993b23a8.chunk.js"
   },
   {
     "revision": "ad115b6f5a24d3410ea2",
