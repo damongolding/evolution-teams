@@ -10,8 +10,7 @@ class App extends Component {
     super(props);
     this.state = {
       players: [
-        { name: "Loading...", kd: 0 },
-        { name: "Loading...", kd: 0 }
+        { name: "Loading players", kd: 0 }
       ]
     };
   }
@@ -22,14 +21,9 @@ class App extends Component {
       key: '10-zhbCvKemVlKJrqHGwjzBXVMylWLEQ6mGZOuFH38Kk',
       simpleSheet: true }
     ).then( (data, tabletop) => { 
-      console.log(data);
       this.setState({players:data});
     });
   }
-
-  componentWillUnmount() {}
-
-  componentDidUpdate() {}
 
   render() {
 
