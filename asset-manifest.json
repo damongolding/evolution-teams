@@ -1,0 +1,21 @@
+{
+  "files": {
+    "main.css": "/evolution-teams/static/css/main.e9c0d303.chunk.css",
+    "main.js": "/evolution-teams/static/js/main.1d55a62b.chunk.js",
+    "main.js.map": "/evolution-teams/static/js/main.1d55a62b.chunk.js.map",
+    "runtime-main.js": "/evolution-teams/static/js/runtime-main.4113106a.js",
+    "runtime-main.js.map": "/evolution-teams/static/js/runtime-main.4113106a.js.map",
+    "static/js/2.dc26bcb1.chunk.js": "/evolution-teams/static/js/2.dc26bcb1.chunk.js",
+    "static/js/2.dc26bcb1.chunk.js.map": "/evolution-teams/static/js/2.dc26bcb1.chunk.js.map",
+    "index.html": "/evolution-teams/index.html",
+    "precache-manifest.b6740673622390ee35db609dc1d1b984.js": "/evolution-teams/precache-manifest.b6740673622390ee35db609dc1d1b984.js",
+    "service-worker.js": "/evolution-teams/service-worker.js",
+    "static/css/main.e9c0d303.chunk.css.map": "/evolution-teams/static/css/main.e9c0d303.chunk.css.map"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.4113106a.js",
+    "static/js/2.dc26bcb1.chunk.js",
+    "static/css/main.e9c0d303.chunk.css",
+    "static/js/main.1d55a62b.chunk.js"
+  ]
+}
