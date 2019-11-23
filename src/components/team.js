@@ -20,7 +20,7 @@ const Team = ({ index, player, currentLastPlayer }) => {
         <div className="message-body has-text-centered">
           <h3 className="title is-4">
             {player.name} 
-            <div>&</div>
+            <div style={{ color : '#ababab' }}>&</div>
             {currentLastPlayer.name}
           </h3>
         </div>
