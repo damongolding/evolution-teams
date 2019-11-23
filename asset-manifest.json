@@ -1,14 +1,14 @@
 {
   "files": {
     "main.css": "/evolution-teams/static/css/main.e9c0d303.chunk.css",
-    "main.js": "/evolution-teams/static/js/main.993b23a8.chunk.js",
-    "main.js.map": "/evolution-teams/static/js/main.993b23a8.chunk.js.map",
+    "main.js": "/evolution-teams/static/js/main.c2094357.chunk.js",
+    "main.js.map": "/evolution-teams/static/js/main.c2094357.chunk.js.map",
     "runtime-main.js": "/evolution-teams/static/js/runtime-main.4113106a.js",
     "runtime-main.js.map": "/evolution-teams/static/js/runtime-main.4113106a.js.map",
     "static/js/2.dc26bcb1.chunk.js": "/evolution-teams/static/js/2.dc26bcb1.chunk.js",
     "static/js/2.dc26bcb1.chunk.js.map": "/evolution-teams/static/js/2.dc26bcb1.chunk.js.map",
     "index.html": "/evolution-teams/index.html",
-    "precache-manifest.7043a82d3671453d89a66883b7f5f89d.js": "/evolution-teams/precache-manifest.7043a82d3671453d89a66883b7f5f89d.js",
+    "precache-manifest.892df4dcff5a34ba061f537f12b78153.js": "/evolution-teams/precache-manifest.892df4dcff5a34ba061f537f12b78153.js",
     "service-worker.js": "/evolution-teams/service-worker.js",
     "static/css/main.e9c0d303.chunk.css.map": "/evolution-teams/static/css/main.e9c0d303.chunk.css.map"
   },
@@ -16,6 +16,6 @@
     "static/js/runtime-main.4113106a.js",
     "static/js/2.dc26bcb1.chunk.js",
     "static/css/main.e9c0d303.chunk.css",
-    "static/js/main.993b23a8.chunk.js"
+    "static/js/main.c2094357.chunk.js"
   ]
 }
