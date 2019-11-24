@@ -24,9 +24,6 @@ jobs:
       env:
         CI: true
 
-    - name : where are we?
-      run: ls
-
     - name: Deploy
       uses: peaceiris/actions-gh-pages@v2.5.0
       env:
