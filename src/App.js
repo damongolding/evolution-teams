@@ -62,6 +62,7 @@ class App extends Component {
               <div className="column is-12-mobile is-9-tablet content">
                 <figure className="image is-16by9">
                   <iframe
+                    title="2v2 brackets"
                     className="has-ratio"
                     width="640"
                     height="360"
