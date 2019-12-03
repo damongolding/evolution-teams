@@ -1,37 +1,34 @@
 import React, { Component } from "react";
 
-import Tabletop from 'tabletop';
+import Tabletop from "tabletop";
 
-import Team from './components/team';
-import Header from './components/header';
+import Team from "./components/team";
+import Header from "./components/header";
 
 class App extends Component {
   constructor(props) {
     super(props);
     this.state = {
-      players: [
-        { name: "Loading players", kd: 0 }
-      ]
+      players: [{ name: "Loading players", kd: 0 }]
     };
   }
- 
+
   componentDidMount() {
     // could do something like pull state from API
-    Tabletop.init( {
-      key: '10-zhbCvKemVlKJrqHGwjzBXVMylWLEQ6mGZOuFH38Kk',
-      simpleSheet: true }
-    ).then( (data, tabletop) => { 
-      this.setState({players:data});
+    Tabletop.init({
+      key: "10-zhbCvKemVlKJrqHGwjzBXVMylWLEQ6mGZOuFH38Kk",
+      simpleSheet: true
+    }).then((data, tabletop) => {
+      this.setState({ players: data });
     });
   }
 
   render() {
-
     const playerSort = this.state.players.sort((a, b) => {
       return b.kd - a.kd;
     });
 
-    const players = playerSort.map( (player, index) => {
+    const players = playerSort.map((player, index) => {
       return (
         <tr key={index}>
           <td>{player.name}</td>
@@ -57,9 +54,30 @@ class App extends Component {
 
     return (
       <div className="App">
-
         <Header />
+
+        <section className="section">
+          <div className="container">
+            <div className="columns is-centered">
+              <div className="column is-12-mobile is-9-tablet content">
+                <figure className="image is-16by9">
+                  <iframe
+                    className="has-ratio"
+                    width="640"
+                    height="360"
+                    src="https://widget.toornament.com/tournaments/639313491010002944/stages/3093068508158189568/?_locale=en_GB"
+                    allowFullScreen
+                    frameBorder="0"
+                  ></iframe>
+                </figure>
+                
+              </div>
+            </div>
+          </div>
+        </section>
+
         
+
         <section className="section">
           <div className="container">
             <div className="columns is-centered">
@@ -72,9 +90,7 @@ class App extends Component {
                       <th>KD</th>
                     </tr>
                   </thead>
-                  <tbody>
-                    { players }
-                  </tbody>
+                  <tbody>{players}</tbody>
                 </table>
               </div>
             </div>
